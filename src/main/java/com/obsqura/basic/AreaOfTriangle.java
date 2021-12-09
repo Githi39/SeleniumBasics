@@ -8,7 +8,7 @@ public class AreaOfTriangle {
         double b= 40;
         System.out.println("width of the Triangle:"+b);
 
-        double h= 100;
+        double h= 150;
         System.out.println("height of the Triangle:"+h);
 
 
