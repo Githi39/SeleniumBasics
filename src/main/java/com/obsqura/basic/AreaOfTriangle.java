@@ -5,7 +5,7 @@ public class AreaOfTriangle {
     {
 
 
-        double b= 50;
+        double b= 70;
         System.out.println("width of the Triangle:"+b);
 
         double h= 180;
