@@ -36,17 +36,20 @@ public class Seleniumobsquraform {
     }
 
     @BeforeMethod
-    public void setup() {
+    public void setup()
+    {
         testInitlz("Chrome");
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown()
+    {
         //driver.close();
     }
 
     @Test(priority = 1)
-    public void VerifyInputform() {
+    public void VerifyInputform()
+    {
         driver.get("https://selenium.obsqurazone.com/index.php");
         WebElement inputform = driver.findElement(By.xpath("//a[@href='simple-form-demo.php']"));
         inputform.click();
@@ -69,7 +72,8 @@ public class Seleniumobsquraform {
     }
 
     @Test(priority = 2)
-    public void verifysingleCheckboxDemo() {
+    public void verifysingleCheckboxDemo()
+    {
         driver.get("https://selenium.obsqurazone.com/check-box-demo.php");
         WebElement box = driver.findElement(By.id("gridCheck"));
         box.click();
@@ -91,25 +95,27 @@ public class Seleniumobsquraform {
 
     }
 
-    public void selectCheckbox(String value1, String value2) {
+    public void selectCheckbox(String value1, String value2)
+    {
         List<WebElement> chkbox = driver.findElements(By.xpath("//input[@class='check-box-list']/following-sibling::label"));
         //System.out.println("total number of checkbox"+chkbox.size());
-        for (int i = 0; i < chkbox.size(); i++) {
+        for (int i = 0; i < chkbox.size(); i++)
+        {
             String values = chkbox.get(i).getText();
-            if (values.equals(value1)) {
+            if (values.equals(value1))
+            {
                 chkbox.get(i).click();
             }
-            if (values.equals(value2)) {
+            if (values.equals(value2))
+            {
                 chkbox.get(i).click();
             }
-
-
         }
 
     }
-
     @Test(priority = 4)
-    public void verifyRadiobuttons() {
+    public void verifyRadiobuttons()
+    {
         driver.get("https://selenium.obsqurazone.com/radio-button-demo.php");
         WebElement radiobuttondemo = driver.findElement(By.xpath("//input[@id='inlineRadio1']"));
         radiobuttondemo.click();
@@ -120,7 +126,8 @@ public class Seleniumobsquraform {
     }
 
     @Test(priority = 5)
-    public void verifyGroupRadiobuttons() {
+    public void verifyGroupRadiobuttons()
+    {
         driver.get("https://selenium.obsqurazone.com/radio-button-demo.php");
         WebElement patientGender= driver.findElement(By.id("inlineRadio11"));
         patientGender.click();

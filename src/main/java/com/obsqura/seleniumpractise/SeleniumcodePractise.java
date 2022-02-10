@@ -15,7 +15,8 @@ public class SeleniumcodePractise {
         System.out.println(actulTitle);
         String PageSource = driver.getPageSource();
        System.out.println(PageSource);
-
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
 
     }
 }
